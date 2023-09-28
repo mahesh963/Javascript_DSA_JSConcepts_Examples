@@ -15,3 +15,16 @@ function fibonacciSeries(num) {
 }
 
 fibonacciSeries(6);
+
+//<------------------Another approach---------------------->
+function FibSeries(num) {
+	let arr = [0, 1];
+
+	for (let i = 2; i < num; i++) {
+		arr.push(arr[i - 1] + arr[i - 2]);
+	}
+
+	console.log(arr);
+}
+
+console.log(FibSeries(6));
