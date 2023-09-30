@@ -53,3 +53,21 @@ function findOddNumber(arr) {
 findOddNumber(input);
 
 //<------------Find odd missing numbers in series ANOTHER APPROACH--------------------->
+
+//<------------ANOTHER APPROACH USING ONLY IF STATEMENT--------------------->
+
+function findMissingOdd(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		let current = arr[i];
+		let next = current + 2;
+		//console.log(arr[i + 1], next);
+		if (arr[i + 1] != next) {
+			//console.log(next);
+			return next;
+			break;
+		}
+	}
+}
+
+console.log(findMissingOdd([4, 6, 8, 12, 14, 16]));
+console.log(findMissingOdd([5, 7, 9, 11, 15, 17]));

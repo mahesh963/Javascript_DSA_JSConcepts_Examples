@@ -8,31 +8,37 @@ class Stack {
 	}
 
 	pop() {
-		if (this.isEmpty()) {
-			return "no elements in the stack";
+		if (this.size() <= 0) {
+			return "no elements in the stack to pop";
 		}
 		return this.stack.pop();
 	}
 
 	peek() {
-		if (this.isEmpty()) {
-			return "no elements in the stack";
+		if (this.size() <= 0) {
+			return "no elements in the stack at peek";
 		}
 
 		return this.stack[this.stack.length - 1];
 	}
 
-	isEmpty() {
-		return this.stack.length === 0;
+	size() {
+		return this.stack.length;
+	}
+
+	print() {
+		let stackStr = "";
+		for (let i = 0; i < this.size(); i++) {
+			stackStr += this.stack[i] + ",";
+		}
+		return stackStr;
 	}
 }
 
 const stack = new Stack();
 
-stack.push(10);
-stack.push(30);
-console.log("klkl", stack.peek());
-
-stack.push(50);
-console.log("klkl", stack.peek());
-console.log(stack);
+console.log(stack.push(15));
+console.log(stack.push(35));
+console.log(stack.pop());
+console.log(stack.push(65));
+console.log(stack.print());

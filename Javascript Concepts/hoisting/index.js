@@ -1,5 +1,5 @@
 //=================== < Hoisting > ============================//
-// Hoisting is javascript behaviour where functions and  variable declarations are moved to the top of the scope at the time of compilation phase
+// Hoisting is javascript behaviour where functions and variable declarations are moved to the top of the scope at the time of compilation phase
 
 console.log(hoistFunc());
 
